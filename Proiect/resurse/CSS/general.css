@@ -1,0 +1,232 @@
+body{
+    --culoare-fundal: rgb(54, 8, 8);
+    --culoare-widget-background: rgb(0, 0, 0);
+    --culoare-widget-background-hover: rgb(161, 19, 0);
+    --culoare-widget-background-hover-tabel: 161, 19, 0;
+    --culoare-headere: rgb(204, 204, 204);
+    --culoare-extra: rgb(105, 100, 105);
+    --culoare-text: rgb(255, 255, 255);
+    --culoare-contur: rgb(255, 0, 0);
+    --margine-pagina:100px;
+    --gap-celule:25px;
+    background-color: var(--culoare-fundal);
+    color: var(--culoare-text);
+    font-family: 'Lexend', sans-serif;
+    font-size: 1em;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.lexend {
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#tab-orar {
+    border-collapse: collapse;
+    border: 5px inset var(--culoare-contur);
+}
+
+#tab-orar tbody tr:nth-child(even) td{
+    border-top: 1px solid var(--culoare-extra);
+    border-bottom: 1px solid var(--culoare-text);
+}
+
+#tab-orar tbody tr:nth-child(odd) td{
+    border-top: 1px solid var(--culoare-text);
+    border-bottom: 1px solid var(--culoare-extra);
+}
+
+#tab-orar td, th {
+    border-left: 1px solid var(--culoare-text);
+    border-right: 1px solid var(--culoare-text);
+    padding: 8px;
+}
+
+#tab-orar tbody tr td{
+    transition: outline 0.5s ease;
+}
+
+#tab-orar tbody tr:hover td{
+    outline: 5px solid rgba(var(--culoare-widget-background-hover-tabel), 0.7);
+    outline-offset: -5px;
+}
+
+#tab-orar > caption {
+    caption-side: bottom;
+}
+
+h1, h2, h3, h4, h5{
+    color: var(--culoare-headere);
+    font-family: 'Bebas Neue', sans-serif;
+}
+p {
+    color: var(--culoare-text);
+}
+main{
+    margin-left: var(--margine-pagina);
+    margin-right: var(--margine-pagina);
+}
+#grid-pagina {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "welcome welcome welcome welcome"
+                         "orar orar evenimente evenimente"
+                         "orar orar anunturi anunturi"
+                         "leaderboard user user despre" 
+                         "gameplay gameplay gameplay gameplay"    
+}
+#grid-pagina > * {
+    border: 1px solid var(--culoare-contur);
+    box-shadow: 0 0 5px var(--culoare-contur);
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#welcome { grid-area: welcome; }
+#orar { grid-area: orar; }
+#evenimente { grid-area: evenimente; }
+#anunturi { grid-area: anunturi; }
+#leaderboard { grid-area: leaderboard; }
+#user { grid-area: user; }
+#despre {grid-area: despre; }
+#gameplay { grid-area: gameplay; }
+
+.Yo-Ya-Hu-Hi {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    display: block;
+    width: 70px;
+    height: 70px;
+
+    background: var(--culoare-widget-background);
+    border-radius: 35px 35px 0 0;
+
+    text-align: center;
+    line-height: 80px;
+
+    opacity: 0.3;
+    
+    box-shadow: inset 0 1px 2px var(--culoare-widget-background-hover),
+                inset 0 -1px 2px var(--culoare-widget-background-hover),
+                inset 1px 0 2px var(--culoare-widget-background-hover),
+                inset -1px 0 2px var(--culoare-widget-background-hover);
+    
+    transition: box-shadow 0.3s ease;
+}
+
+.arrow {
+    display: inline-block;
+    font-size: 60px;
+    opacity: 0.3;
+    color: var(--culoare-widget-background-hover);
+    transition: transform 0.3s, color 0.3s;
+}
+
+.Yo-Ya-Hu-Hi:hover {
+    opacity: 1;
+    background: var(--culoare-widget-background-hover);
+    box-shadow: inset 0 4px 6px var(--culoare-widget-background),
+                inset 0 -4px 6px var(--culoare-widget-background),
+                inset 4px 0 6px var(--culoare-widget-background),
+                inset -4px 0 6px var(--culoare-widget-background);
+}
+
+.Yo-Ya-Hu-Hi:hover .arrow{
+    transform: scale(1.5);
+    opacity: 1;
+    color: var(--culoare-widget-background);
+}
+
+.container-iframe
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    min-width: 300px;
+    height: auto;
+}
+
+.taburi-iframe {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-celule);
+}
+
+.taburi-iframe > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 20px;
+    width: 100px;
+
+    box-shadow: inset 0 0 2px 1px var(--culoare-widget-background-hover);
+    padding: 10px;
+    background-color: var(--culoare-widget-background);
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    text-align: center;
+    text-decoration: none;
+    color: var(--culoare-text);
+
+    transition: background-color 0.3s ease;
+}
+.taburi-iframe a:hover{
+    background: var(--culoare-widget-background-hover);
+    box-shadow: inset 0 0 2px 1px var(--culoare-widget-background);
+}
+
+
+@media screen and (max-width:1200px){
+    body{
+        --margine-pagina:70px;
+        --gap-celule:20px
+        font-size: 0.8em;
+    }
+    .orar {
+    overflow-x: auto;
+    }
+    #grid-pagina {
+    display: grid;
+    gap: 3px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "welcome welcome "
+                         "orar evenimente"
+                         "orar anunturi "
+                         "leaderboard despre" 
+                         "user user"
+                         "gameplay gameplay"    
+                        }
+    .container-iframe iframe {
+        max-width: 500px;
+    }
+}
+@media screen and (max-width:700px){
+    body{
+        --margine-pagina:40px;
+        --gap-celule:10px;
+        font-size: 0.6em;
+    }
+    #grid-pagina {
+        display: block;
+    }
+    .orar {
+    overflow-x: auto;
+    }
+    .container-iframe iframe {
+        max-width: 100%;
+        min-width: 100px;
+    }
+}

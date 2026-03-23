@@ -12,13 +12,19 @@
         <link rel="shortcut icon" href="./resurse/imagini/favicon/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="./resurse/imagini/favicon/apple-touch-icon.png" />
         <link rel="manifest" href="/resurse/imagini/favicon/site.webmanifest" />
-        <link rel="stylesheet" href="resurse/CSS/IDK.css" type="text/css" />
+        <link rel="stylesheet" href="resurse/CSS/general.css" type="text/css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <section id="main">
-            <h1>Bine ati venit la Airblast</h1>
+            <h1>Bine ati venit la Airblast <i class="fa-solid fa-gun"></i><i class="fa-solid fa-explosion fa-fade"></i></h1>
             <img src="./resurse/imagini/AirblastHomePage.png" alt="shadow"/>
             <p>Rating-ul Airblast pana acum: </p>
             <meter min="0" max="5" low="1.5" high="3.5" value="4" optimum="5"></meter> <!--"Bara de progres"-->
@@ -45,7 +51,6 @@
         </header>
 <main> <!--  comentariu -->
         <div id="grid-pagina">
-
             <section id="welcome">
                 <hgroup>
                     <h2>Bine ati venit</h2>
@@ -71,85 +76,19 @@
             <hr class="prajituri"/>
             <div id="container-video">
                 <img style="width:50%" class="shotgun" src="./resurse/imagini/Saiga-12K.png" alt="Saiga-12K" title="Un model de replica">
-                <div id="centrare-video"> <!--  PLaylist -->
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed?listType=playlist&list=PLLkTei7fhU6YzRTOr63bqEnJaAR7x1xap&autoplay=1&loop=1&mute=1" name="ifr-player" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; control; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="container-iframe"> <!--  PLaylist -->
+                    <iframe width="500" height="325" src="https://www.youtube.com/embed?listType=playlist&list=PLLkTei7fhU6YzRTOr63bqEnJaAR7x1xap&autoplay=1&loop=1&mute=1" name="ifr-player" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; control; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
             </section>
-            <section id="promotii">
-                <h2>Promoții și oferte</h2>
-                <article>
-                    <h3 class="titlu"><i lang="en">Munition Mayday</i></h3>
-                    <p><b>Airblast</b> oferă <b>reduceri de <ins>15%</ins></b> pentru toate bilele de airsoft cumparate</p>
-                    <p>Oferta este valabilă doar în zilele luni la sediile <abbr title="Magazinul Airblast">AB</abbr>.</p>
-                </article>
-                <article>
-                    <h3>Ofertă pachet</h3>
-                    <p>Magazinul Airblast ofera un pachet care va ajuta fara probleme sa intrati in primul meci de Airsoft:</p>
-                    <ol>
-                        <li>Un model de arma la un pret moderat</li>
-                        <li>2 Seturi de Bile</li>
-                        <li>Protectie Airsoft</li>
-                        <li>Un atasament tip vizor</li>
-                        <li>Gratis: 2 Incarcatoare extra pentru modelul de arma</li>
-                        <li>Gratis: O insigna cu magazinul</li>
-                        <li>Gratis: Un <i lang="en">speedloader</i> pentru incarcare rapida</li>
-                    </ol>
-                    
-                </article>
-                <article>
-                    <h3><i lang="en">Sniper weekend</i></h3>
-                    <p>In fiecare sambata si duminica:</p>
-                    <ol>
-                        <li>Modelele pentru distana lunga au reducere de <ins>20%</ins>.</li>
-                        <li>Atasamentele pentru modelele de distana au o reducere de <ins>30%</ins></li>
-                        <li>Set-uri de <i lang="en">Ghillie</i> au o reducere de <ins>10%</ins></li>
-                    </ol>
-                </article>
-            </section>
-            <section id="produse">
-                <h2>Produsele noastre</h2>
-                <p>Vă oferim o multitudine de metode pentru a va gasi stilul preferat de joc.</p>
-                <section><!--  Lista -->
-                    <h3>Modele de arme de distanta lunga:</h3>
-                    <ul>
-                        <li>Remington Model 700</li>
-                        <li>Accuracy International AWM</li>
-                        <li>Barrett M82</li>
-                        <li>Dragunov SVD</li>
-                        <li>M24</li>
-                        <li>CheyTac M200 Intervention</li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Modele de arme SMG:</h3>
-                    <ul>
-                        <li>MP5</li>
-                        <li>Uzi</li>
-                        <li>KRISS Vector</li>
-                        <li>PP-19 Bizon</li>
-                        <li>MAC-10</li>
-                        <li>UMP</li>
-                        <li>Thompson SMG</li>
-                    </ul>
-                </section>
-                
-                <section>
-                    <h3>Modele de arme <i lang="en">Shotgun</i>:</h3>
-                    <ul>
-                        <li>Mossberg 500</li>
-                        <li>Remington 870</li>
-                        <li>Saiga-12</li>
-                        <li>Kel-Tec KSG</li>
-                        <li>Franchi SPAS-12</li>
-                        <li>Benelli M4</li>
-                        <li>Spas-12</li>
-                    </ul>
-                </section>
-            </section>
+            <div id="user"><!--  Imagini cu link-->
+                <h1>Despre utilizator</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
             <section id="orar">
                 <h2>Orar</h2>
                 <table id="tab-orar"> <!--  tabel -->
+                    <caption>Program dat</caption>
                     <thead>
 
                         <tr>
@@ -200,59 +139,21 @@
                 </table> 
                 <p><strong>Atentie!!!</strong> in prima zi a lunii facem inventar.</p>
             </section> 
-            <div id="arme"><!--  Imagini cu link-->
-                <h1>Produse des cumparate</h1>
-            <a href="resurse/imagini/mickeylit-assault-rifle-549301_1920.png" target="_parent">MP5</a><br>
-            Rating:<meter min="0" max="5" low="2" high="4" value="5" optimum="5"></meter><br>
-            <a href="resurse/imagini/sainathkotage-ump-5675038_1920.jpg" target="_parent">UMP</a><br>
-            Rating:<meter min="0" max="5" low="2" high="4" value="3.5" optimum="5"></meter><br>
-            <a href="resurse/imagini/Spas-12.png" target="_parent">Spas-12</a><br>
-            Rating:<meter min="0" max="5" low="2" high="4" value="1" optimum="5"></meter><br>
-            </div>
             <section id="anunturi">
-                <dl>
-                <h2 class="fg-img">Anunțuri</h2> <!--  Time -->
-                <dt><time datetime="2025-07-20T12:00">20 Iulie 2025</time></dt> <dd>Eveniment de airsoft, acest eveniment se afla in Chernobyl, <span lang="en"><b><i>Welcome to the Zone</i></b>, startul se da la 12:00</span>.</dd>
-                <dt><time datetime="2022-01-05">5 Ianuarie 2022</time></dt> <dd><strong>Covidul s-a terminat, airsoft-ul poate fi din nou practicat in liniste</strong>.</p>
-                <dt><time datetime="2021-10-22">22 Octombrie 2021</time></dt> <dd><span>Am adăugat un nou model de arma: Saiga-12.</span></dd>
-                <dt><time datetime="2021-08-11">11 August 2021</time></dt> <dd><span>Am adăugat un nou model de arma: PP-19 Bizon.</span></dd>
-                <dt><time datetime="2020-07-05T00:00">5 Iulie 2020</time></dt> <dd>Eveniment de airsoft, acest eveniment are loc in Kentucky, <span lang="en"><b><i>Free for All Megamash</i></b>, startul se da la 00:00</span>.</dd>
-                <dt><time datetime="2020-04-01">1 Aprilie 2020</time></dt> <dd>Am adus stoc nou de produse.</dd>
-                </dl>
+                <h2 class="fg-img">Anunturi</h2> <!--  Time -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>                
             </section>
-            <section id="index-intrebari">
-                <h2>Întrebări frecvente</h2>
-                <details><summary>Cine poate cumpara o replica airsoft?</summary>
-                    <p>Orice persoana care are varsta legala.</p>
-                </details>
-                <details><summary>Este protectia necesara in meciurile de airsoft?</summary>
-                    <p><strong>Protectia este absolut necesara!</strong></p>
-                </details>
-                <details><summary>Se pot creea accidente datorita acestor modele?</summary>
-                    <p>Da.</p>
-                </details>
-                <details><summary>Care sunt regulile in Airsoft?</summary> <!--  Link site -->
-                    <p>Aici aveti un link care duce la regulamentul despre Airsoft <a href="https://lege5.ro/Gratuit/gi2tqmjsgy/legea-nr-117-2011-pentru-modificarea-si-completarea-legii-nr-295-2004-privind-regimul-armelor-si-al-munitiilor" target="_blank"><strong>Legea nr 117</strong></a>.</p>
-                </details>
+            <section id="evenimente">
+                <h2>Evenimente</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </section>
-        <section id="galerie-statica">
-            <h2>Galerie cu echipe Airsoft</h2>
-            <div id="grid-galerie">
-                <div>
-                <figure>
-                <img src="resurse/imagini/Echipa1.jpg" alt="Echipa Airsoft" width="50%" height="50%">
-                <figcaption>Top Riders echipa Airsoft</figcaption>
-                </figure>
-                <figure>
-                <img src="resurse/imagini/Echipa2.jpg" alt="Echipa Airsoft" width="50%" height="50%">
-                <figcaption>Red Wolf echipa Airsoft</figcaption>
-                </figure>
-                <figure>
-                <img src="./resurse/imagini/Echipa3.jpg" alt="Echipa Airsoft" width="50%" height="50%">
-                <figcaption>Echipa Airsoft clasica</figcaption>
-                </figure>          
-                </div>
-            </div>
+        <section id="leaderboard">
+            <h2>Lista utilizatori</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+        <section id="despre">
+            <h3>Despre site</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </section>
         <section id="gameplay">
             <h2>Clase</h2>
@@ -274,9 +175,9 @@
             <h1>Dati click pentru a vedea cat costa un stil de airsoft</h1>
             <img src="./resurse/imagini/ChooseThyStyle.png" usemap="#selc" width="75%", height="75%">
             <map name="selc">
-                <area shape="rect" coords="51, 0, 252.75, 459.75" href="https://www.pngwing.com/en/free-png-bkicw">
-                <area shape="rect" coords="330.75, 0, 623.25, 459.75" href="https://www.pngwing.com/en/free-png-zehic">
-                <area shape="rect" coords="661.5, 0, 849, 459.75" href="https://www.pngwing.com/en/free-png-tzalm">
+                <area shape="rect" coords="40, 0, 202.75, 459.75" href="https://www.pngwing.com/en/free-png-bkicw">
+                <area shape="rect" coords="280.75, 0, 520.25, 459.75" href="https://www.pngwing.com/en/free-png-zehic">
+                <area shape="rect" coords="550.5, 0, 700, 459.75" href="https://www.pngwing.com/en/free-png-tzalm">
             </map>
         </section>
     </main>
@@ -291,6 +192,7 @@
             Telefon: <a href="+40657876234">tel</a><br>
             Whattsapp: <a href="https://wa.me/40657876234"> Whatt</a>
         </address>
-        <p> Copyright  &copy;<time datetime="2026-02-27"> 27 Februarie 2026 </time></p> <a href="#main">Inapoi sus</a>
+        <p> Copyright  &copy;<time datetime="2026-02-27"> 27 Februarie 2026 </time></p>
+        <a href="#main"  class="Yo-Ya-Hu-Hi" title="Inapoi sus"><span class="arrow">&#129081;</span> </a>
     </footer>
 </html>
