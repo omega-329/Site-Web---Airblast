@@ -1,0 +1,68 @@
+$latime: 120px;
+$inaltime: 30px;
+
+nav {
+    --latime-buton: #{$latime};
+    --inaltime-buton: #{$inaltime};
+    background-color: var(--culoare-widget-background);
+    color: var(--culoare-text);
+
+    #hamburger, #ch-menu {
+        display: none;
+    }
+}
+
+ul {
+    display: flex;
+    position: relative;
+    list-style: none;
+    padding: 0px;
+
+    li {
+        cursor: pointer;
+        width: var(--latime-buton);
+        height: var(--inaltime-buton);
+        background-color: var(--culoare-widget-background);
+        color: var(--culoare-text);
+        text-align: center;
+        position: relative;
+        line-height: var(--inaltime-buton);
+        transition: all 0.3s linear;
+        .txt1000{
+            display: none;
+        }
+        &:hover {
+            background-color: var(--culoare-widget-background);
+            color: var(--culoare-contur);
+
+            // Triggering the submenu display
+            ul {
+                display: block;
+                position: relative;
+                z-index: 10;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    ul {
+        display: none;
+        animation: animatie_submeniu 0.3s linear;
+        transform-origin: center top;
+        list-style: none;
+        position: absolute;
+    }
+}
+#acasa {
+    display: none;
+}
+@keyframes animatie_submeniu {
+    0% { transform: scale(0, 0); }
+    50% { transform: scale(0.5, 0.5); }
+    100% { transform: scale(1, 1); }
+}
