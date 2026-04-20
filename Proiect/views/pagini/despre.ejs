@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Magazinul Airblast - despre</title>
+    <meta name="description" content="Istoric al magazinului și politici recente">
+    <meta name="keywords" content="Airblast, Airsoft, Despre Airblast, Legi airsoft">
+    <link rel="stylesheet" type="text/css" href="/resurse/CSS/video.css">
+    <%- include('../fragmente/head.ejs') %>
+
+</head>
+
+<body>
+    <%- include('../fragmente/header.ejs') %>
+    <main>
+        <a href="https://www.speedtest.net" class="stilizare-linkuri">test</a>
+        <video id="video-vtt" controls poster="/resurse/imagini/Kuva.png" preload="auto">
+            <source src="/resurse/video/KUVA.mp4" type="video/mp4">
+            <source src="/resurse/video/KUVA.webm" type="video/webm">
+            <track label="Română" kind="subtitles" srclang="ro" src="/resurse/video/tracks/subtitrari_ro.vtt" default>
+            <track label="English" kind="subtitles" srclang="en" src="/resurse/video/tracks/subtitrari_en.vtt">
+        </video>
+    </main>
+    <%- include('../fragmente/footer.ejs') %>
+</body>
+
+</html>

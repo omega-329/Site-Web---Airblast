@@ -1,0 +1,27 @@
+		body{
+			background-color: black;
+			color: white;
+		}
+		#err-imag{
+			background-size:100% auto;
+			background-position:center center;
+			background-repeat:no-repeat;
+		}
+		
+		#err-imag img{
+			width:100%;
+			height: 100%;
+		}
+		#err-coloane{
+			display:flex;
+			padding-top:1em;
+			padding-left:1em;
+		}
+		
+		#err-coloane section{
+			font-size:2em;
+			padding-left:1em;
+		}
+		#err-coloane h2{
+			font-size:2em;
+		}

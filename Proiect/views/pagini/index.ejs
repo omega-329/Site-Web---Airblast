@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Magazinul Airblast</title>
+    <meta name="description" content="Airblast ofera arme si echipamente de airsoft de calitate pentru a domina competitia.">
+    <meta name="keywords" content="Airblast, Arme Airsoft, Echipament Airsoft, Airsoft, Pusca Airsoft, Gaz Airsoft, Bile Arma, Airblast Arme, Airblast Echipamente, Bile Plastic, Atasamente Airsoft">
+    <%- include('../fragmente/head.ejs') %>
+
+</head>
+
+<body>
+    <%- include('../fragmente/header.ejs') %>
+    <main> <!--  comentariu -->
+        <div id="grid-pagina">
+            <section id="welcome">
+                <hgroup>
+                    <h2>Bine ati venit</h2>
+                    <p class="subtitlu">Prezentarea Magazinul</p>
+                </hgroup>
+
+                <p class="intro">Vă mulțumim că ne vizitați site-ul. De aici puteti lua tot ceea ce trebuie pentru airsoft</p>
+                
+                <div class="intro-oferte"><div>Arme</div><div>Echipament</div><div>Atasamente</div><div>Bile</div></div>
+                <div id="dv-prezentare-1">
+                    <div id="dv-prezentare">
+                    <figure>
+                    <picture>
+                        <!-- il ia pe primul care se potriveste cu query-ul din media-->
+                        <source srcset="resurse/imagini/AirsoftSWAT-tilifon.png" media="(max-width:700px)"/>
+                        <source srcset="resurse/imagini/AirsoftSWAT-tableton.png" media="(max-width:1200px)"/>
+                        <img src="resurse/imagini/AirsoftSWAT.png" alt="Airsoft SWAT" title="Exemplu SWAT"/>
+                    </picture>
+                    <figcaption>Exemplu de airsoft SWAT</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <hr class="prajituri"/>
+            <div id="container-video">
+                <img style="width:50%" class="shotgun" src="resurse/imagini/Saiga-12K.png" alt="Saiga-12K" title="Un model de replica">
+                <div class="container-iframe"> <!--  PLaylist -->
+                    <iframe width="500" height="325" src="https://www.youtube.com/embed?listType=playlist&list=PLLkTei7fhU6YzRTOr63bqEnJaAR7x1xap&autoplay=1&loop=1&mute=1" name="ifr-player" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; control; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            </section>
+            <div id="user"><!--  Imagini cu link-->
+                <h1>Despre utilizator</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <section id="orar">
+                <h2>Orar</h2>
+                <table id="tab-orar"> <!--  tabel -->
+                    <caption>Program dat</caption>
+                    <thead>
+
+                        <tr>
+                            <th>Perioadă</th>
+                            <th>Zi</th>
+                            <th>Interval Magazin fizic</th>
+                            <th>Interval Magazin online</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="5">Zile<br/>Lucrătoare</td>
+                            <td>Luni</td>
+                            <td>8:00-16:00</td>
+                            <td rowspan="7">INFINIT</td>
+                        </tr>
+                        <tr>
+                            <td>Marti</td>
+                            <td>8:00-16:00</td>
+                        </tr>
+                        <tr>
+                            <td>Miercuri</td>
+                            <td>8:00-16:00</td>
+                        </tr>
+                        <tr>
+                            <td>Joi</td>
+                            <td>8:00-16:00</td>
+                        </tr>
+                        <tr>
+                            <td>Vineri</td>
+                            <td>8:00-16:00</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Weekend</td>
+                            <td>Sambata</td>
+                            <td>10:00-14:00</td>
+                        </tr>
+                        <tr>
+                            <td>Duminica</td>
+                            <td>Inchis</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Închis cu ocazia sărbătorilor legale.</td>
+                        </tr>
+                    </tfoot>
+                </table> 
+                <p><strong>Atentie!!!</strong> in prima zi a lunii facem inventar.</p>
+            </section> 
+            <section id="anunturi">
+                <h2 class="fg-img">Anunturi</h2> <!--  Time -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>                
+            </section>
+            <section id="evenimente">
+                <h2>Evenimente</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
+        <section id="leaderboard">
+            <h2>Lista utilizatori</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+        <section id="despre">
+            <h3>Despre site</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+        <section id="gameplay">
+            <h2>Clase</h2>
+            <p>Dacă nu stiti in ce categorie v-ati incadra cand vine de airsoft, aici aveti niste exemple de clase pentru airsoft</p>
+            <div class="container-iframe">
+                <div class="taburi-iframe"> <!--  Youtube simplu -->
+                <a href="https://www.youtube.com/embed/myJfrt2670g" target="ifr-video"><span lang="en">Sniper</span></a>
+                <a href="https://www.youtube.com/embed/eRqee5YCcoE" target="ifr-video" ><span lang="en">Breacher</span></a>
+                <a href="https://www.youtube.com/embed/ZJGgr_heTi4" target="ifr-video" ><span lang="en">Classic</span></a>
+                </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/myJfrt2670g" name="ifr-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+
+            </div> <!-- Download click-->
+            <a href="resurse/imagini/locoarecare.png" download="LOLOLOL.png">Loc de airsoft</a>
+        </section>
+        </div>
+        <section id="Selector"> <!--  Map -->
+            <h1>Dati click pentru a vedea cat costa un stil de airsoft</h1>
+            <img src="resurse/imagini/ChooseThyStyle.png" usemap="#selc" width="75%", height="75%">
+            <map name="selc">
+                <area shape="rect" coords="40, 0, 202.75, 459.75" href="https://www.pngwing.com/en/free-png-bkicw">
+                <area shape="rect" coords="280.75, 0, 520.25, 459.75" href="https://www.pngwing.com/en/free-png-zehic">
+                <area shape="rect" coords="550.5, 0, 700, 459.75" href="https://www.pngwing.com/en/free-png-tzalm">
+            </map>
+        </section>
+    </main>
+    <%- include('../fragmente/footer.ejs') %>
+</body>
+
+</html>

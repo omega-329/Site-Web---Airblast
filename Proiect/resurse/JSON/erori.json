@@ -1,0 +1,57 @@
+{
+    "cale_baza": "/resurse/imagini/erori",
+    "eroare_default":{
+        "titlu":"Eroare :<",
+        "text": "Ai dat peste o eroare, ne cerem scuze.",
+        "imagine":"interzis.png"
+    },
+    "info_erori": [
+        {
+            "identificator":404,
+            "status":true,
+            "titlu":"404 - MIA!",
+            "text": "Aceasta pagina a disparut in misiune!",
+            "imagine":"missing.png"
+        },
+        {
+            "identificator":403,
+            "status":true,
+            "titlu":"4̷0̷3̸ ̶-̵ ̷A̷S̶T̴A̶ ̸S̵A̸ ̵C̶R̶E̴Z̶I̶ ̵T̶U̷",
+            "text": "N̷U̷ ̴A̵I̶ ̴C̵E̶ ̵C̶A̸U̷T̴A̸ ̴A̷I̶C̷I̶ ̵!̸!̵!̷",
+            "imagine":"blestemul-infractorului.png"
+        },
+        {
+            "identificator":400,
+            "status":true,
+            "titlu":"400 - bad request",
+            "text": "Ghinion",
+            "imagine":"interzis.png"
+        },
+        
+        {
+            "identificator":1,
+            "status":false,
+            "titlu":"WIP",
+            "text": "Revino mai tarziu!",
+            "imagine":"interzis.png"
+        },
+        
+        {
+            "identificator":2,
+            "status":false,
+            "titlu":"Eroare baza date",
+            "text": "Ghinion",
+            "imagine":"interzis.png"
+        },
+        
+        {
+            "identificator":3,
+            "status":false,
+            "titlu":"Date gresit",
+            "text": "Verificati datele",
+            "imagine":"interzis.png"
+        }
+        
+    ]
+}
+  

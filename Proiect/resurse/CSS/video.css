@@ -1,0 +1,26 @@
+#video-vtt {
+    height: 600px ;
+    width: 1000px ;
+}
+
+::cue {
+    background-image: linear-gradient(to right, var(--culoare-extra), var(--culoare-widget-background-hover));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-color: transparent; 
+}
+
+@media screen and (max-width:1000px){
+#video-vtt {
+    height: 600px ;
+    width: 600px ;
+}
+}
+
+@media screen and (max-width:700px){
+#video-vtt {
+    height: 300px ;
+    width: 300px ;
+}
+}

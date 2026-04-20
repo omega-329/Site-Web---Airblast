@@ -1,0 +1,46 @@
+{
+  "name": "airblast",
+  "version": "1.0.0",
+  "description": "un magazin de airsoft",
+  "keywords": [
+    "Airblast",
+    "Arme",
+    "Airsoft",
+    "Echipament",
+    "Airsoft",
+    "Airsoft",
+    "Pusca",
+    "Airsoft",
+    "Gaz",
+    "Airsoft",
+    "Bile",
+    "Arma",
+    "Airblast",
+    "Arme",
+    "Airblast",
+    "Echipamente",
+    "Bile",
+    "Plastic",
+    "Atasamente",
+    "Airsoft"
+  ],
+  "homepage": "https://github.com/omega-329/Site-Web---Airblast#readme",
+  "bugs": {
+    "url": "https://github.com/omega-329/Site-Web---Airblast/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omega-329/Site-Web---Airblast.git"
+  },
+  "license": "ISC",
+  "author": "Ciobanu Mihai Cristian",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^5.0.2",
+    "express": "^5.2.1"
+  }
+}
