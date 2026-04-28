@@ -6,6 +6,7 @@
     <meta name="description" content="Istoric al magazinului și politici recente">
     <meta name="keywords" content="Airblast, Airsoft, Despre Airblast, Legi airsoft">
     <link rel="stylesheet" type="text/css" href="/resurse/CSS/video.css">
+    <link rel="stylesheet" type="text/css" href="/resurse/CSS/galerie-statica.css">
     <%- include('../fragmente/head.ejs') %>
 
 </head>
@@ -20,6 +21,19 @@
             <track label="Română" kind="subtitles" srclang="ro" src="/resurse/video/tracks/subtitrari_ro.vtt" default>
             <track label="English" kind="subtitles" srclang="en" src="/resurse/video/tracks/subtitrari_en.vtt">
         </video>
+        <section id="galerie-statica">
+            <h2>Galerie</h2>
+            <div id="grid-galerie">
+                <% for(let imag of locals.imagini) { %>
+                    <figure>
+                        <picture>
+                            <source srcset="<%- imag.fisier_mediu%>" media="(max-widith:1100px)">
+                            <img src="<%- imag.fisier %>" alt="briose"></div>
+                        </picture>
+                        <figcaption><%- imag.descriere %></figcaption>
+                    </figure>
+                <%}%>
+        </section>
     </main>
     <%- include('../fragmente/footer.ejs') %>
 </body>
