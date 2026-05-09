@@ -1,0 +1,21 @@
+<section id="galerie-statica">
+    <h2>Galerie</h2>
+    <div id="grid-galerie">
+        <% if (locals.imagini && Array.isArray(locals.imagini)) { %>
+            <% for (let imag of locals.imagini) { %>
+            <figure>
+                <picture>
+                    <source srcset="<%- imag.cale_imagine %>" media="(max-width:700px)">
+                    <source srcset="<%- imag.cale_imagine %>" media="(max-width:1100px)">
+                    <img src="<%- imag.cale_imagine %>" alt="<%- imag.alt || imag.cale_imagine %>" title="<%- imag.descriere %>">
+                </picture>
+                <figcaption>
+                    <span class="index-galerie"></span>
+                    <strong><%- imag.titlu %></strong>: <%- imag.descriere %>
+                    <% if (imag.autor) { %> <br> <small>Autor: <%- imag.autor %></small> <% } %>
+                </figcaption>
+            </figure>
+            <% } %>
+        <% } %>
+    </div>
+</section>

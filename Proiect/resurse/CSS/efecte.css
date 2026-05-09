@@ -1,0 +1,112 @@
+.dios {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.dios img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: grayscale(0%);
+    transition: filter 0.5s ease;
+}
+
+.dios:hover img {
+    filter: grayscale(100%);
+}
+
+.dios::before,
+.dios::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.dios:hover::before,
+.dios:hover::after {
+    opacity: 0;
+}
+
+.efect-css-reflexie-text {
+margin: 0;
+    font-size: 5rem;
+    color: #ff0000;
+    transform: scaleY(-0.8) translateY(50px) skew(-30deg) translateX(3px); 
+    opacity: 0.6;
+    filter: blur(1px);
+    -webkit-mask-image: repeating-radial-gradient(
+        ellipse 60% 20% at 50% 0%, 
+        black 0px, 
+        transparent 5px, 
+        black 10px
+    );
+    mask-image: repeating-radial-gradient(
+        ellipse 60% 20% at 50% 0%, 
+        black 0px, 
+        transparent 5px, 
+        black 10px
+    );
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    transition: all 0.3s ease;
+}
+
+.efect-css-text{
+    margin: 0;
+    font-size: 5rem;
+    z-index: 2;
+}
+
+.efect-css-reflexie-text, .efect-css-text{
+    font-size:1em;
+	font-weight: bold;
+}
+
+.efect-css-reflexie-text:hover {
+    animation: undeApa 0.3s infinite linear;
+}
+
+hr  {
+    border: none;
+    height: 20px;
+    background-image: 
+        /* The circular handle: a non-repeating radial gradient */
+        radial-gradient(circle at center, #cccccc 35%, #242424 80%, transparent 80%),
+        /* The bar: a linear gradient spanning the full width */
+        linear-gradient(to bottom, transparent 0%, #cccccc 50%, transparent 100%);
+    background-size: 16px 16px, 100% 6px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@keyframes undeApa {
+    0% {
+        -webkit-mask-image: repeating-radial-gradient(
+            ellipse 60% 20% at 50% 0%, 
+            black 0px, 
+            transparent 5px, 
+            black 10px
+        );
+    }
+    50% {
+        -webkit-mask-image: repeating-radial-gradient(
+            ellipse 65% 25% at 50% 2%, 
+            black 2px, 
+            transparent 7px, 
+            black 12px
+        );
+    }
+    100% {
+        -webkit-mask-image: repeating-radial-gradient(
+            ellipse 60% 20% at 50% 0%, 
+            black 0px, 
+            transparent 5px, 
+            black 10px
+        );
+    }
+}

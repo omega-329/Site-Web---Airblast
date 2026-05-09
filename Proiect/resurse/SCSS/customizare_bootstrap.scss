@@ -1,0 +1,27 @@
+@use '../../node_modules/bootstrap/scss/bootstrap.scss' with 
+(
+    $primary: rgb(54, 8, 8),
+    $secondary:rgb(255, 0, 0),
+    $font-family-sans-serif: ("Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif),
+    $grid-breakpoints: (
+    xs: 0,
+    sm: 700px,
+    md: 1000px,
+    lg: 1200px,
+    xl: 1300px,
+    xxl: 1500px
+    ),
+    $border-radius: 10px,
+    $h1-font-size: 4rem,
+    $h2-font-size: 2.8rem,
+    $font-size-base: 1rem,
+);
+
+.btn-custom {
+    color: #cccccc !important;
+}
+
+.bg-airblast-dark {
+    background-color: #1a1a1a !important;
+    color: #ff0000 !important;
+}

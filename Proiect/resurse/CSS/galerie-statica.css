@@ -1,35 +1,55 @@
-#galerie-statica {
-    counter-reset: galerie-counter;
-}
-.index-rom::before {
-    counter-increment: galerie-counter;
-    content: counter(galerie-counter, upper-roman) ".";
-}
-
-.grid-galerie {
+#grid-galerie {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr); /* 4 coloane pe ecran mare */
+    gap: 15px;
     width: 100%;
+    counter-reset: galerie-counter; /* Resetare counter pentru cifre romane */
 }
 
-.grid-galerie figure:nth-child(1) { grid-column: 1; }
-.grid-galerie figure:nth-child(2) { grid-column: 2; }
+#grid-galerie figure {
+    position: relative;
+    margin: 0;
+    counter-increment: galerie-counter;
+    border: 1px solid transparent; /* Border inițial invizibil */
+    transition: all 1.2s ease; /* Durata cerută: 1s și o cincime */
+    box-sizing: border-box;
+}
 
-/* Responsive */
+#grid-galerie figure:nth-child(5) {
+    grid-column-start: 3;
+}
+
+#grid-galerie figure:nth-child(7) {
+    grid-column-start: 3;
+}
+
+#grid-galerie img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Cifre Romane în Figcaption */
+#grid-galerie figcaption .index-galerie::before {
+    content: counter(galerie-counter, upper-roman) ". ";
+    font-weight: bold;
+}
+
+/* Tranziția la Hover */
+#grid-galerie figure:hover {
+    transform: scale(1.25) rotate(-10deg); /* Scalare 25% și rotație 10 grade stânga */
+    border: 4px solid #ff0000; /* Borderul crește la 4px */
+    z-index: 10;
+}
+
+/* Media Queries pentru Responsivitate */
 @media screen and (max-width: 1000px) {
-    .grid-galerie { grid-template-columns: repeat(2, 1fr); }
-}
-@media screen and (max-width: 600px) {
-    .grid-galerie { grid-template-columns: 1fr; }
-}
-
-.grid-galerie figure img {
-    transition: all 1.2s ease-in-out;
-    border: 0px solid transparent; 
+    #grid-galerie {
+        grid-template-columns: repeat(2, 1fr); /* 2 coloane pe mediu */
+    }
 }
 
-.grid-galerie figure:hover img {
-    transform: scale(1.25) rotate(-10deg);
-    border: 4px solid black; 
+@media screen and (max-width: 700px) {
+    #grid-galerie {
+        grid-template-columns: 1fr; /* O coloană pe mic */
+    }
 }

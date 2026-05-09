@@ -47,6 +47,21 @@ app.get(["/", "/index","/home"], function(req, res){
     });
 });
 
+app.get("/despre", function(req, res) {
+    const acum = new Date();   
+    const minut = acum.getMinutes();
+    const sfertCurent = Math.floor(minut / 15) + 1;
+
+    let imaginiFiltrate = obGlobal.obImagini.imagini.filter(img => {
+        let sferturi = img.sfert_ora.split(",").map(s => s.trim());
+        return sferturi.includes(sfertCurent.toString());
+    }).slice(0, 10);
+
+    res.render("pagini/despre", {
+        imagini: imaginiFiltrate
+    });
+});
+
 function initErori(){
     let continut = fs.readFileSync(path.join(__dirname,"resurse/JSON/erori.json")).toString("utf-8");
     let erori=obGlobal.obErori=JSON.parse(continut)
@@ -98,8 +113,6 @@ function initImagini(){
         let caleFisMediuAbs=path.join(caleAbsMediu, numeFis+".webp");
         sharp(caleFisAbs).resize(300).toFile(caleFisMediuAbs);
         imag.cale_imagine=path.join("/", caleGalerie, "mediu", numeFis+".webp" )
-        imag.cale_imagine=path.join("/", caleGalerie, imag.cale_imagine )
-        
     }
     // console.log(obGlobal.obImagini)
 }
