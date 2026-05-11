@@ -30,25 +30,28 @@
 			"cale_imagine":"Lancaster.png",
 			"titlu":"Lancaster",
 			"descriere":"Un pistol cu 4 tevi",
-			"sfert_ora":"1"
+			"sfert_ora":"1",
+			"atribuire":"Foto de Memecry2 pe WikimediaCommons (CC-BY)"
 		},
 		{
-			"cale_imagine":"Liberator.png",
-			"titlu":"Liberator",
-			"descriere":"Un prototip de shotgun cu 4 tevi",
-			"sfert_ora":"1, 3, 4"
+			"cale_imagine":"M1Garand.png",
+			"titlu":"M1 Garand",
+			"descriere":"O arma de infanterie din al doilea razboi mondial",
+			"sfert_ora":"1, 3"
 		},
 		{
 			"cale_imagine":"M4A4.png",
 			"titlu":"M4A4",
 			"descriere":"Carabiniera renumita americana",
-			"sfert_ora":"3"
+			"sfert_ora":"3",
+			"atribuire":"Foto de Photo Courtesy of PEO Soldier pe WikimediaCommons (CC BY-SA)"
 		},
 		{
-			"cale_imagine":"Remmington700.png",
-			"titlu":"Remmington",
+			"cale_imagine":"Remington700.png",
+			"titlu":"Remington",
 			"descriere":"O arma de distanta",
-			"sfert_ora":"3"
+			"sfert_ora":"3",
+			"atribuire":"Foto de Picanox pe WikimediaCommons (CC BY-SA)"
 		},
 				{
 			"cale_imagine":"Sturmgewehr.png",
@@ -60,7 +63,8 @@
 			"cale_imagine":"Thompson.png",
 			"titlu":"Thompson",
 			"descriere":"Arma din al doilea razboi mondial",
-			"sfert_ora":"1, 3"
+			"sfert_ora":"1, 3",
+			"atribuire":"Foto de Hmaag pe WikimediaCommons (CC BY-SA))"
 		}
 	]
 }
