@@ -33,10 +33,10 @@
 }
 
 .efect-css-reflexie-text {
-margin: 0;
+    margin: 0;
     font-size: 5rem;
     color: #ff0000;
-    transform: scaleY(-0.8) translateY(50px) skew(-30deg) translateX(3px); 
+    transform: scaleY(-0.8) translateY(1.8em) skew(-30deg) translateX(3px) !important; 
     opacity: 0.6;
     filter: blur(1px);
     -webkit-mask-image: repeating-radial-gradient(

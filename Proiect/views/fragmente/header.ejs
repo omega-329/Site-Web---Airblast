@@ -1,4 +1,5 @@
 <header>
+             <script type="text/javascript" src=/resurse/js/tema.js></script>
             <section id="main">
             <h1 id="Header-inceput">Bine ati venit la Airblast <i class="fa-solid fa-gun"></i><i class="fa-solid fa-explosion fa-fade"></i></h1>
             <img src="./resurse/imagini/AirblastHomePage.png" alt="LOGO"/>
@@ -12,10 +13,10 @@
                 <ul>
                     <li><a href="/index"><i class="fa-solid fa-house"></i><span id="acasa"> Acasa</span></a></li>
                     <li><a href="/despre"><i class="fa-solid fa-info emo1000"></i><span class="txt1000"></i> Despre</span></a></li>
-                    <li><i class="fa-solid fa-gun emo1000"></i><span class="txt1000"> Produse</span>
+                    <li><a href="/produse"><i class="fa-solid fa-gun emo1000"></i><span class="txt1000"> Produse</span></a>
                         <ul>
                             <li>
-                                <a href="#arme">Replici</a>
+                                Replici
                             </li>
                             <li>
                                 Atasamente
@@ -40,6 +41,16 @@
                     </li>
                     <li><a href="#promotii"><i class="fa-solid fa-layer-group emo1000"></i><span class="txt1000"> Promotii</span></a></li>
                 </ul>
+                <div class="selector-tema-container p-2 text-end">
+                    <label for="schimbator-tema" class="fw-bold small" style="color: var(--culoare-text);">
+                        Aspect Site:
+                    </label>
+                    <select id="schimbator-tema" class="form-select form-select-sm d-inline-block w-auto ms-2" autocomplete="off">
+                        <option value="tema-dark">Tactical Dark</option>
+                        <option value="tema-light">Standard Light</option>
+                        <option value="tema-army">Military Camo</option>
+                    </select>
+                </div>
             </nav>
         </section>
         </header>

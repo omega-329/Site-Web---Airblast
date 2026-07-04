@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="description" content="Airblast ofera arme si echipamente de airsoft de calitate pentru a domina competitia.">
+        <meta name="keywords" content="Airblast, Arme Airsoft, Echipament Airsoft, Airsoft, Pusca Airsoft, Gaz Airsoft, Bile Arma, Airblast Arme, Airblast Echipamente, Bile Plastic, Atasamente Airsoft, <%- locals.prod.nume %>">
+        
+        <title>Magazinul Airblast - <%- locals.prod.nume %></title>
+        <%- include("../fragmente/head") %>     
+        <link href="/resurse/css/produs.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+    <%- include("../fragmente/header") %>
+    <main>
+        <section>
+            <h2>Pagină produs</h2>
+                <article id="art-produs">
+                    <h3><span class="nume"><%- locals.prod.nume %></span></h3>
+                    <p>Preț: <span class="pret"><%- locals.prod.pret %> </span></p>
+                    <p>Descriere: <span class="descriere"><%- locals.prod.descriere %> </span></p>
+                    <p>Forța (m/s): <span class="forta"><%- locals.prod.forta %> </span></p>
+                    <p>Tip replică: <span class="replica"><%- locals.prod.tip_replica %> </span></p>
+                    <p>Culoare: <span class="culoare"><%- locals.prod.culoare %> </span></p>
+                    <p>Stil: <span class="stil"><%- locals.prod.stil %> </span></p>
+                    <p>Reîncărcare: <span class="reincarcare"><%- locals.prod.reincarcare %> </span></p>
+                    <p>Dimensiune magazin: <span class="pmagazin"><%- locals.prod.dimensiune_magazin %> </span></p>
+                    <p>Poate avea atașamente?: <span class="atasamente"><%- locals.prod.atasament_friendly %> </span></p>
+                    <p>Greutate bile: <span class="bile"><%- locals.prod.bile %> </span></p>
+                    <p>Data adăugare: <span class="data"><%- locals.prod.data_adaugare %> </span></p>
+                    <figure class="imag-produs">
+                        <img  src="/resurse/imagini/produse/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
+                    </figure>    
+                </article>
+            <button class="btn btn-info btn-compara" 
+                data-id="<%- prod.id %>" 
+                data-nume="<%- prod.nume %>" 
+                data-pret="<%- prod.pret %>" 
+                data-categorie="<%- prod.tip_replica %>" 
+                data-bile="<%- prod.bile %>">
+                Compară
+            </button>
+        </section>
+    </main>
+    <%- include("../fragmente/footer") %>
+    </body>
+</html>

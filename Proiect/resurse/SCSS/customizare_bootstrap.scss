@@ -1,27 +1,52 @@
-@use '../../node_modules/bootstrap/scss/bootstrap.scss' with 
-(
-    $primary: rgb(54, 8, 8),
-    $secondary:rgb(255, 0, 0),
-    $font-family-sans-serif: ("Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif),
-    $grid-breakpoints: (
+// 1. Declararea tuturor variabilelor tale (fără blocul "with")
+$primary: rgb(54, 8, 8);
+$secondary: rgb(255, 0, 0);
+$grid-breakpoints: (
     xs: 0,
     sm: 700px,
     md: 1000px,
     lg: 1200px,
     xl: 1300px,
     xxl: 1500px
-    ),
-    $border-radius: 10px,
-    $h1-font-size: 4rem,
-    $h2-font-size: 2.8rem,
-    $font-size-base: 1rem,
 );
+$h1-font-size: 2rem;
+$h2-font-size: 1.5rem;
+$font-size-base: 1rem;
+$btn-border-radius: 0.75rem;
+$btn-border-width: 2px;   
+$form-range-thumb-width: 1.5rem;
+$form-range-thumb-height: 1.5rem;
+$form-range-thumb-bg: #000000;
+$form-range-thumb-border: 0;
+$form-range-track-bg: #fe4400;
+$form-range-active-thumb-bg: #ff7d7d;
+$enable-gradients: true;
 
+// 2. Importul Bootstrap - va prelua automat valorile de mai sus
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// 3. Clasele tale custom (rămân neschimbate)
 .btn-custom {
     color: #cccccc !important;
 }
 
-.bg-airblast-dark {
-    background-color: #1a1a1a !important;
-    color: #ff0000 !important;
+body {
+    margin: 8px;
+    font-family: 'Lexend', sans-serif;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.lexend {
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+    font-weight: bold;
+    font-size: 1.5em;
 }

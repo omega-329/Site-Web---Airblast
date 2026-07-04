@@ -1,0 +1,272 @@
+
+main{
+    --padd-main:1rem;
+    padding-left:var(--padd-main);
+    padding-right:var(--padd-main);
+}
+
+.continut-produs {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* Împărțirea egală sau proporțională a coloanelor */
+.coloana-stanga {
+    flex: 1;
+    max-width: 45%;
+}
+
+.coloana-dreapta {
+    flex: 1;
+}
+
+/* Controlul dimensiunii imaginii conform cerinței */
+.imagine-produs img {
+    width: 100%;
+    max-width: 300px; /* Destul de mică și fixă pentru estetică */
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--bs-border-radius);
+}
+
+/* Structura listei sub imagine */
+.lista-caracteristici {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+.lista-caracteristici li {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+/* Regula strictă din cerință: numele caracteristicii bold și cu fundal/text diferit */
+.lista-caracteristici .eticheta {
+    font-weight: bold;
+    background-color: var(--culoare-headere); /* Schimbă fundalul */
+    color: var(--culoare-widget-background);   /* Schimbă textul pentru contrast */
+    padding: 2px 6px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.produs{
+    position: relative;
+}
+.selecteaza-cos{
+    display: inline-block;
+    background-color: var(--culoare-widget-background);
+    position:absolute;
+    bottom:0.5rem;
+    right:0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding:0.3rem;
+    border:1px solid transparent;
+}
+
+.selecteaza-cos:hover{
+    background-color: var(--culoare-widget-background-hover);
+    
+    border:1px solid  var(--culoare-contur);
+}
+
+.selectat{
+    color:green;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.container-filtre-tematic {
+    /* Fundalul va fi negru pe dark theme și alb/rozaliu pe light theme */
+    background-color: var(--culoare-widget-background);
+    
+    /* Bordură și umbră asortate cu tema */
+    border: 2px solid var(--culoare-contur);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
+    /* Textul de bază al containerului */
+    color: var(--culoare-text);
+    
+    /* Tranziție fină la schimbarea temei */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Stilizarea etichetelor (label-urilor) ca să iasă în evidență */
+.container-filtre-tematic .form-label, 
+.container-filtre-tematic .fw-bold {
+    color: var(--culoare-headere);
+    letter-spacing: 0.5px;
+}
+
+/* Suprascrierea butoanelor de filtrare ca să folosească schema ta */
+.container-filtre-tematic #filtrare {
+    background-color: var(--culoare-headere);
+    color: var(--culoare-widget-background);
+    border: 1px solid var(--culoare-contur);
+}
+
+.container-filtre-tematic #filtrare:hover {
+    background-color: var(--culoare-widget-background-hover);
+    color: var(--culoare-text);
+}
+
+.container-filtre-tematic #resetare {
+    background-color: transparent;
+    color: var(--culoare-text);
+    border: 1px solid var(--culoare-text);
+}
+
+.container-filtre-tematic #resetare:hover {
+    background-color: var(--culoare-extra);
+    color: var(--culoare-widget-background);
+}
+
+.custom-modal {
+    position: fixed;
+    z-index: 2000; /* Peste meniu și orice alt element */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.75); /* Fundal semi-transparent la exterior */
+    backdrop-filter: blur(4px); /* Efect de blur pe fundal */
+}
+
+.modal-continut {
+    background-color: var(--culoare-fundal);
+    color: var(--culoare-text);
+    margin: 10% auto;
+    padding: 25px;
+    border: 3px solid var(--culoare-contur);
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.buton-inchide {
+    color: var(--culoare-headere);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.buton-inchide:hover {
+    color: var(--culoare-widget-background-hover);
+    transform: scale(1.15);
+}
+
+/* Animație simplă de apariție */
+.animate-zoom {
+    animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Stiluri pentru așezarea datelor în interiorul modalului */
+#modal-corp-date h3 {
+    color: var(--culoare-headere);
+    border-bottom: 2px solid var(--culoare-contur);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#modal-corp-date p {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+#modal-corp-date strong {
+    color: var(--culoare-headere);
+}
+
+.eticheta-ieftin {
+position: absolute;
+    top: 10px;       /* Distanța de sus */
+    right: 10px;     /* Distanța de dreapta */
+    background-color: #fffb00;
+    color: rgb(0, 0, 0);
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 10;     /* Să stea peste imagine/text */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#container-comparare {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    border: 2px solid #333;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: none;
+    border-radius: 8px;
+    min-width: 250px;
+}
+
+.produs-comparat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+}
+
+.btn-sterge-compara {
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 2px 8px;
+}
+
+#btn-afiseaza-comparare {
+    width: 100%;
+    background: #198754;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+#tooltip-comparare {
+    position: absolute;
+    display: none;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    z-index: 9999;
+    pointer-events: none; /* Crucial pentru a nu bloca cursorul */
+    white-space: nowrap;
+}
+
+/* Folosim o clasă pentru dezactivare, nu atributul "disabled", 
+   altfel browserul "înghite" evenimentele de mouse și tooltip-ul nu va merge */
+.btn-compara.dezactivat {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

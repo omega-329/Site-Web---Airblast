@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="description" content="Airblast ofera arme si echipamente de airsoft de calitate pentru a domina competitia.">
+        <meta name="keywords" content="Airblast, Arme Airsoft, Echipament Airsoft, Airsoft, Pusca Airsoft, Gaz Airsoft, Bile Arma, Airblast Arme, Airblast Echipamente, Bile Plastic, Atasamente Airsoft">
+        <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css" />
+        <title>Magazinul Airblast - Replici</title>
+        <%- include("../fragmente/head") %>     
+        <script type="text/javascript" src=/resurse/js/produse.js></script>
+        <script type="text/javascript" src=/resurse/js/produse-cos.js></script>
+
+    </head>
+
+    <div id="modal-produs" class="custom-modal" style="display: none;">
+        <div class="modal-continut animate-zoom">
+            <span id="inchide-modal" class="buton-inchide">&times;</span>
+            <div id="modal-corp-date">
+                </div>
+        </div>
+    </div>
+    <body>
+
+
+    <%- include("../fragmente/header") %>
+
+    <main class="container my-4">
+        <p id="info-produse">Se afișează: 0 produse</p>
+            <div class="col-12 border-top pt-3 mt-3">
+                <h5 class="fw-bold" style="color: var(--culoare-headere);">Sortare Alternativă Criteriu Dublu</h5>
+                <div class="row g-2 align-items-end">
+                    <div class="col-12 col-sm-4">
+                        <label for="sel-sort-cheie1" class="form-label small fw-bold">Criteriu Principal:</label>
+                        <select id="sel-sort-cheie1" class="form-select form-select-sm">
+                            <option value="nume">Nume</option>
+                            <option value="pret">Preț</option>
+                            <option value="categorie">Categorie</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <label for="sel-sort-cheie2" class="form-label small fw-bold">Criteriu Secundar (în caz de egalitate):</label>
+                        <select id="sel-sort-cheie2" class="form-select form-select-sm">
+                            <option value="pret">Preț</option>
+                            <option value="nume">Nume</option>
+                            <option value="categorie">Categorie</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-sm-2">
+                        <label for="sel-sort-ordine" class="form-label small fw-bold">Ordine:</label>
+                        <select id="sel-sort-ordine" class="form-select form-select-sm">
+                            <option value="1">Crescător</option>
+                            <option value="-1">Descrescător</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-sm-2">
+                        <button type="button" id="btn-sort-dubla" class="btn btn-sm btn-primary w-100 fw-bold">Sortează complex</button>
+                    </div>
+                </div>
+            </div>
+        <div class="row g-3 id-bloc-filtre p-3 border rounded mb-4 container-filtre-tematic">
+            
+            <div class="col-12 col-md-4">
+                <label for="inp-nume" class="form-label fw-bold ">Căutare după Nume:</label>
+                <input type="text" class="form-control" id="inp-nume" placeholder="Introduceți numele...">
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <label for="inp-pret" class="form-label fw-bold">Preț minim: <span id="infoRange">(<%- minPret %>)</span></label>
+                
+                <input type="range" class="form-range" id="inp-pret" 
+                    min="<%- minPret %>" 
+                    max="<%- maxPret %>" 
+                    value="<%- minPret %>"> <div class="d-flex justify-content-between text-muted small">
+                    <span><%- minPret %> RON</span>
+                    <span><%- maxPret %> RON</span>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8">
+                <span class="form-label d-block fw-bold mb-2">Categorie Replică:</span>
+                <div class="d-flex flex-wrap gap-3">
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" id="rad-toate" name="gr_rad" value="toate" checked type="radio"/>
+                        <label class="form-check-label" for="rad-toate">Toate</label>
+                    </div>
+
+                    <% for(let i = 0; i < locals.categorii.length; i++) { %>
+                        <div class="form-check">
+                            <input class="form-check-input" 
+                                id="rad-cat-<%- i %>" 
+                                name="gr_rad" 
+                                value="<%- locals.categorii[i].tip %>" 
+                                type="radio"/>
+                            <label class="form-check-label" for="rad-cat-<%- i %>">
+                                <%- locals.categorii[i].tip %>
+                            </label>
+                        </div>
+                    <% } %>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 d-flex align-items-end justify-content-md-end gap-2 mt-3 mt-md-0">
+                <button id="filtrare" class="btn btn-primary w-100 w-md-auto">
+                    <i class="bi bi-filter"></i> Filtrează
+                </button>
+                <button id="resetare" class="btn btn-secondary w-100 w-md-auto">
+                    <i class="bi bi-arrow-counterclockwise"></i> Resetează
+                </button>
+            </div>
+            <div class="col-12 col-sm-6 mt-2">
+                <button type="button" id="btn-filtrare-server" class="btn btn-success w-100 fw-bold">
+                    <i class="fa-solid fa-server"></i> Filtrează pe Server
+                </button>
+            </div>
+            <div class="col-12 d-flex gap-2 border-top pt-3 mt-2 flex-wrap">
+                <span class="fw-bold text-muted me-2 align-self-center">Sortare după preț și nume:</span>
+                <button id="sortCrescNume" class="btn btn-outline-dark btn-sm">Ascendent</button>
+                <button id="sortDescrescNume" class="btn btn-outline-dark btn-sm">Descendent</button>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+            <label for="inp-categorie" class="form-label fw-bold">Culoare disponibilă:</label>
+            <select id="inp-categorie" class="form-select">
+                <option id="sel-toate" selected value="toate">Orice culoare</option>
+                
+                <% for(let c of locals.culori) { %>
+                    <option value="<%- c.cul %>"><%- c.cul %></option>
+                <% } %>
+                
+            </select>
+        </div>
+        <p id="p-suma">Apăsați Alt+"c" pentru suma preturilor produselor afișate. </p>
+  
+        <section id="produse">
+
+            <h2>Produse</h2>
+
+            <p id="mesaj-filtrare-vida" class="alert alert-warning text-center fw-bold my-4" style="display: none;">
+                Nu există produse conform filtrării curente. Încearcă alte opțiuni.
+            </p>
+            <div id="container-paginare" class="d-flex justify-content-center gap-2 mb-4"></div>
+            <div class="grid-produse">
+                <% for( let prod of locals.produse) { %>
+    <article id="artc-<%- prod.id %>" class="produs <%- prod.tip_replica %>">
+        
+        <h3 class="nume">
+            <a href="/produse/<%- prod.id %>">
+                <span class="val-nume"><%- prod.nume %></span>
+            </a>
+        </h3>
+
+        <div class="continut-produs">
+            
+            <div class="coloana-stanga">
+                <figure class="imagine-produs">
+                    <img src="/resurse/imagini/produse/<%- prod.imagine %>" alt="[imagine <%- prod.nume %>]" />
+                </figure>
+
+                <ul class="lista-caracteristici">
+                    <li><span class="eticheta">Forță:</span> <span class="val-forta"><%- prod.forta %></span> Lbs</li>
+                    
+                    <li><span class="eticheta">Mod Reîncărcare:</span> <span class="val-reincarcare"><%- prod.reincarcare %></span></li>
+                    
+                    <li>
+                        <span class="eticheta">Culori disponibile:</span> 
+                        <span class="val-culori"><%- Array.isArray(prod.culoare) ? prod.culoare.join(', ') : prod.culoare %></span>
+                    </li>
+                    
+                    <li>
+                        <span class="eticheta">Data adăugare:</span> 
+                        <% 
+                            // Conversie dată în formatul cerut: 'zi_saptamana, zi nume_luna an' (ex: Sambata, 15 Septembrie 2018)
+                            const optiuni = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+                            const dataFormatata = new Date(prod.data_adaugare).toLocaleDateString('ro-RO', optiuni);
+                            // Transformăm prima literă în majusculă pentru aspect (ex: "luni" -> "Luni")
+                            const dataFinala = dataFormatata.charAt(0).toUpperCase() + dataFormatata.slice(1);
+                        %>
+                        <time datetime="<%- prod.data_adaugare %>"><%- dataFinala %></time>
+                    </li>
+                    
+                    <li>
+                        <span class="eticheta">Compatibil atașamente:</span> 
+                        <span class="val-atasament"><%- prod.atasament_friendly ? 'Da' : 'Nu' %></span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="coloana-dreapta">
+                <p class="categorie-text">
+                    Categoria: <span class="val-replica"><%- prod.tip_replica %></span>
+                </p>
+                
+                <p class="greutate-bile">
+                    Greutate Bile: <span class="val-categorie"><%- prod.bile %></span>
+                </p>
+                
+                <p class="pret">
+                    Preț: <span class="val-pret"><%- prod.pret %></span> RON
+                </p>
+
+                <div class="descriere-produs">
+                    <p><%- prod.descriere %></p>
+                </div>
+
+                <label class="selecteaza-cos">
+                    <input type="checkbox" class="select-cos" value="<%- prod.id %>" autocomplete="off"> Selectează pentru coș
+                </label>
+                <button class="btn btn-sm btn-info btn-compara mt-2" 
+                    data-id="<%- prod.id %>" 
+                    data-nume="<%- prod.nume %>" 
+                    data-pret="<%- prod.pret %>" 
+                    data-categorie="<%- prod.tip_replica %>" 
+                    data-bile="<%- prod.bile %>">
+                    Compară
+                </button>
+                <div class="controale-bonus6 mt-3 d-flex gap-2">
+                    <button type="button" class="btn btn-sm btn-outline-secondary btn-pin" title="Păstrează permanent produsul pe ecran, indiferent de filtrări" data-id="<%- prod.id %>">
+                        <i class="fa-solid fa-thumbtack"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary btn-ascunde-temp" title="Ascunde temporar produsul (va apărea la următoarea filtrare/sortare)">
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary btn-ascunde-sesiune" title="Șterge produsul definitiv pe durata acestei sesiuni" data-id="<%- prod.id %>">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </article>
+<% } %>
+            </div>
+        </section>
+    </main>
+
+    <%- include("../fragmente/footer") %>
+    </body>
+</html>
